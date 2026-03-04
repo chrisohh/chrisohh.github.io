@@ -1,0 +1,120 @@
+---
+import publications from '../data/publications.json';
+
+function formatAuthors(authors: string[]): string[] {
+  return authors.map((a) => (a === 'Chan-Ye Ohh' ? `<strong>${a}</strong>` : a));
+}
+
+function getBadges(pub: any): { label: string; cssClass: string }[] {
+  const badges: { label: string; cssClass: string }[] = [];
+  for (const note of pub.notes || []) {
+    if (note.toLowerCase().includes('editor')) badges.push({ label: "Editor's Suggestion", cssClass: 'badge--accent' });
+    if (note.toLowerCase().includes('open access')) badges.push({ label: 'Open Access', cssClass: 'badge--primary' });
+  }
+  return badges;
+}
+---
+
+<section class="publications" id="publications">
+  <div class="container">
+    <h2>Publications</h2>
+
+    <ol class="pub-list">
+      {publications.map((pub) => (
+        <li class="pub-item">
+          <p class="pub-item__authors" set:html={formatAuthors(pub.authors).join(', ')} />
+          <p class="pub-item__title">
+            <a href={pub.url || `https://doi.org/${pub.doi}`} target="_blank" rel="noopener">
+              {pub.title}
+            </a>
+          </p>
+          <p class="pub-item__venue">
+            <em>{pub.venue}</em>
+            {pub.volume && `, ${pub.volume}`}
+            {pub.pages_or_article && `, ${pub.pages_or_article}`}
+            {` (${pub.year})`}
+          </p>
+          <div class="pub-item__meta">
+            {getBadges(pub).map((b) => (
+              <span class={`badge ${b.cssClass}`}>{b.label}</span>
+            ))}
+            {pub.doi && (
+              <a href={`https://doi.org/${pub.doi}`} target="_blank" rel="noopener" class="pub-item__link">
+                DOI
+              </a>
+            )}
+            {pub.pdf && (
+              <a href={`/${pub.pdf}`} class="pub-item__link">PDF</a>
+            )}
+            {pub.preprint?.url && (
+              <a href={pub.preprint.url} target="_blank" rel="noopener" class="pub-item__link">
+                arXiv
+              </a>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
+  </div>
+</section>
+
+<style>
+  .publications {
+    background: var(--color-section-alt);
+  }
+
+  .pub-list {
+    list-style: none;
+    counter-reset: pub-counter;
+  }
+
+  .pub-item {
+    counter-increment: pub-counter;
+    padding: 1.25rem 0;
+    border-bottom: 1px solid #d5e8ee;
+  }
+
+  .pub-item:last-child {
+    border-bottom: none;
+  }
+
+  .pub-item__authors {
+    font-size: 0.95rem;
+    margin-bottom: 0.2rem;
+  }
+
+  .pub-item__title {
+    margin-bottom: 0.2rem;
+  }
+
+  .pub-item__title a {
+    font-weight: 500;
+  }
+
+  .pub-item__venue {
+    font-size: 0.9rem;
+    color: var(--color-subtle);
+    margin-bottom: 0.4rem;
+  }
+
+  .pub-item__meta {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    align-items: center;
+  }
+
+  .pub-item__link {
+    font-size: 0.85rem;
+    font-weight: 500;
+    padding: 0.15rem 0.5rem;
+    border: 1px solid var(--color-primary);
+    border-radius: 4px;
+  }
+
+  .pub-item__link:hover {
+    background: var(--color-primary);
+    color: var(--color-white);
+    text-decoration: none;
+  }
+</style>
