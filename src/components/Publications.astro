@@ -44,7 +44,7 @@ function getBadges(pub: any): { label: string; cssClass: string }[] {
               </a>
             )}
             {pub.pdf && (
-              <a href={`${import.meta.env.BASE_URL}${pub.pdf}`} class="pub-item__link">PDF</a>
+              <a href={`${import.meta.env.BASE_URL}/${pub.pdf}`} class="pub-item__link">PDF</a>
             )}
             {pub.preprint?.url && (
               <a href={pub.preprint.url} target="_blank" rel="noopener" class="pub-item__link">
