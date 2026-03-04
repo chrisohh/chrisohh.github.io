@@ -1,0 +1,79 @@
+[
+  {
+    "type": "journal-article",
+    "title": "The effects of stratification on the near wake of 6:1 prolate spheroid",
+    "authors": [
+      "Chan-Ye Ohh",
+      "Geoffrey R. Spedding"
+    ],
+    "year": 2024,
+    "venue": "Journal of Fluid Mechanics",
+    "volume": "997",
+    "pages_or_article": "A43",
+    "doi": "10.1017/jfm.2024.829",
+    "url": "https://www.cambridge.org/core/journals/journal-of-fluid-mechanics/article/effects-of-stratification-on-the-near-wake-of-6-1-prolate-spheroid/5B4BC561CC5D698131BCBC55B70C5FAC",
+    "pdf": "pubs/Ohh_Spedding_2024_JFM_997_A43.pdf",
+    "notes": [
+      "Open access (CC BY 4.0) per publisher page."
+    ]
+  },
+  {
+    "type": "journal-article",
+    "title": "Wake identification of stratified flows using dynamic mode decomposition",
+    "authors": [
+      "Chan-Ye Ohh",
+      "Geoffrey R. Spedding"
+    ],
+    "year": 2022,
+    "venue": "Physical Review Fluids",
+    "volume": "7",
+    "pages_or_article": "024801",
+    "doi": "10.1103/PhysRevFluids.7.024801",
+    "url": "https://link.aps.org/doi/10.1103/PhysRevFluids.7.024801",
+    "pdf": "pubs/Ohh_Spedding_2022_PRF_024801.pdf",
+    "notes": [
+      "Editors\u2019 Suggestion (per PDF)."
+    ]
+  },
+  {
+    "type": "journal-article",
+    "title": "Regime identification for stratified wakes from limited measurements: a library-based sparse regression formulation",
+    "authors": [
+      "Vamsi Krishna Chinta",
+      "Chan-Ye Ohh",
+      "Geoffrey Spedding",
+      "Mitul Luhar"
+    ],
+    "year": 2022,
+    "venue": "Physical Review Fluids",
+    "volume": "7",
+    "pages_or_article": "033803",
+    "doi": "10.1103/PhysRevFluids.7.033803",
+    "url": "https://link.aps.org/doi/10.1103/PhysRevFluids.7.033803",
+    "preprint": {
+      "arxiv": "2202.04119",
+      "url": "https://arxiv.org/abs/2202.04119"
+    },
+    "notes": [
+      "arXiv preprint available."
+    ]
+  },
+  {
+    "type": "conference-abstract",
+    "title": "Leveraging fluid-structure interaction for passive control of flapping locomotion",
+    "authors": [
+      "Chan-Ye Ohh",
+      "Yangyang Huang",
+      "Ziteng Wen",
+      "Eva Kanso",
+      "Mitul Luhar"
+    ],
+    "year": 2016,
+    "venue": "APS Division of Fluid Dynamics Meeting (DFD16)",
+    "url": "https://archive.aps.org/dfd/2016/h19/3/",
+    "pdf": "pubs/Ohh_et_al_2016_APS_DFD_Abstract_001142.pdf",
+    "notes": [
+      "Abstract submitted 29 Jul 2016 (per PDF)."
+    ]
+  }
+]

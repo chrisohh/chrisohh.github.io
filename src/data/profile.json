@@ -1,0 +1,47 @@
+{
+  "name": "Chan-Ye (Chris) Ohh",
+  "name_short": "C.-Y. Ohh",
+  "orcid": "0000-0002-7313-4291",
+  "google_scholar": "https://scholar.google.com/citations?user=3VvK59oAAAAJ&hl=en",
+  "links": {
+    "researchgate": "https://www.researchgate.net/profile/Chan-Ye-Ohh",
+    "linkedin": "https://www.linkedin.com/in/chrischanyeohh",
+    "scripps_profile": "https://scripps.ucsd.edu/profiles/cohh",
+    "usc_stratlab_people": "https://stratlab.usc.edu/people/",
+    "luhar_lab_people": "https://ruk.usc.edu/bio/luharx/people/people.html",
+    "airsea_lab_people": "https://airsea.ucsd.edu/people/"
+  },
+  "emails_public": [
+    {
+      "email": "ohh@usc.edu",
+      "context": "USC Stratified Fluids Lab people page (PhD student listing)."
+    },
+    {
+      "email": "cohh@ucsd.edu",
+      "context": "Scripps Institution of Oceanography profile page."
+    }
+  ],
+  "roles_public": [
+    {
+      "role": "Postdoctoral Researcher",
+      "org": "Air-Sea Interaction Laboratory / Scripps Institution of Oceanography (UC San Diego)",
+      "context": "Air-Sea Interaction Lab people page."
+    },
+    {
+      "role": "Postdoc employee",
+      "org": "Scripps Institution of Oceanography (UC San Diego)",
+      "context": "Scripps profile page."
+    },
+    {
+      "role": "PhD student",
+      "org": "University of Southern California (Stratified Fluids Lab)",
+      "context": "Stratified Fluids Lab people page (historical)."
+    }
+  ],
+  "research_keywords": [
+    "stratified wakes",
+    "dynamic mode decomposition (DMD)",
+    "fluid mechanics",
+    "air\u2013sea interaction / geophysical flows (contextual affiliation)"
+  ]
+}
