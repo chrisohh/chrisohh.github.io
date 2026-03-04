@@ -1,0 +1,107 @@
+---
+import ResearchTheme from './ResearchTheme.astro';
+---
+
+<section class="research" id="research">
+  <div class="container">
+    <h2>Research</h2>
+
+    <ResearchTheme
+      title="Stratified Ocean Wakes"
+      figures={[
+        {
+          src: '/images/figures/JFM_2024_997_A43_Fig2_experimental_setup.png',
+          alt: 'Tow-tank experimental setup for stratified wake measurements',
+        },
+        {
+          src: '/images/figures/JFM_2024_997_A43_Fig10_vorticity_trajectory.png',
+          alt: 'Streamwise vorticity and vortex trajectory measurements',
+        },
+      ]}
+    >
+      <p>
+        When objects move through density-stratified water &mdash; as submarines,
+        autonomous underwater vehicles, and marine organisms do in the ocean &mdash;
+        their wakes behave fundamentally differently than in uniform fluid. Buoyancy
+        forces suppress vertical motions, reorganize vortex structures, and create
+        distinctive internal wave signatures that can persist far downstream.
+      </p>
+      <p>
+        My experimental work uses a large tow tank with precisely controlled density
+        stratification to study these wakes systematically. By towing scaled models
+        through stably stratified water and measuring the resulting flow fields with
+        particle image velocimetry (PIV), I have mapped how wake structure transitions
+        across the Reynolds number and Froude number parameter space.
+      </p>
+      <p class="theme__papers">
+        <strong>Related:</strong>
+        <a href="https://doi.org/10.1017/jfm.2024.829" target="_blank" rel="noopener">Ohh &amp; Spedding (2024) <em>JFM</em></a>,
+        <a href="https://doi.org/10.1103/PhysRevFluids.7.024801" target="_blank" rel="noopener">Ohh &amp; Spedding (2022) <em>PRF</em></a>
+      </p>
+    </ResearchTheme>
+
+    <ResearchTheme
+      title="Data-Driven Flow Identification"
+      reverse
+      figures={[
+        {
+          src: '/images/figures/PRF_2022_024801_Fig6_snapshots_DMD_modes.png',
+          alt: 'DMD mode comparison between simulation and experiment',
+        },
+        {
+          src: '/images/figures/PRF_2022_024801_Fig13_TDMD_example.png',
+          alt: 'Time-resolved dynamic mode decomposition analysis',
+        },
+      ]}
+    >
+      <p>
+        Real ocean measurements are sparse &mdash; sensors are expensive, and you
+        rarely have the luxury of full-field data. How do you identify what kind of
+        flow you are observing from just a handful of measurement points?
+      </p>
+      <p>
+        I develop data-driven methods that extract physically meaningful flow
+        structures from limited experimental data. My primary tool is dynamic mode
+        decomposition (DMD), a technique that decomposes unsteady flow fields into
+        spatiotemporal modes. Applied to stratified wake experiments, DMD reveals the
+        dominant oscillatory structures that characterize different wake regimes.
+      </p>
+      <p>
+        My 2022 paper on this topic was selected as an
+        <span class="badge badge--accent">Editor's Suggestion</span>
+        in <em>Physical Review Fluids</em>.
+      </p>
+      <p class="theme__papers">
+        <strong>Related:</strong>
+        <a href="https://doi.org/10.1103/PhysRevFluids.7.024801" target="_blank" rel="noopener">Ohh &amp; Spedding (2022) <em>PRF</em></a>,
+        <a href="https://doi.org/10.1103/PhysRevFluids.7.033803" target="_blank" rel="noopener">Chinta, Ohh et al. (2022) <em>PRF</em></a>
+      </p>
+    </ResearchTheme>
+
+    <ResearchTheme
+      title="Mesoscale Ocean Dynamics"
+      figures={[]}
+    >
+      <p>
+        At Scripps Institution of Oceanography, I am advancing methods for
+        characterizing mesoscale ocean eddies &mdash; rotating structures
+        spanning tens to hundreds of kilometers that play a central role in
+        ocean heat transport, nutrient distribution, and carbon cycling. By
+        integrating satellite altimetry observations with modeling techniques,
+        I aim to improve how we detect, track, and understand these features
+        across the global ocean.
+      </p>
+      <div class="todo">
+        <span class="todo__file">src/components/Research.astro</span>
+        <p class="todo__text">
+          Verify and expand this section. Add specific methods, results, or
+          broader impacts. Add figures when available.
+        </p>
+      </div>
+      <p class="theme__papers">
+        <strong>Lab:</strong>
+        <a href="https://airsea.ucsd.edu/people/" target="_blank" rel="noopener">Air-Sea Interaction Laboratory</a>
+      </p>
+    </ResearchTheme>
+  </div>
+</section>
