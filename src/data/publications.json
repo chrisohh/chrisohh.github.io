@@ -59,6 +59,43 @@
     ]
   },
   {
+    "type": "conference-presentation",
+    "title": "The near-wake of an inclined 6:1 prolate spheroid in a stratified fluid",
+    "authors": ["Chan-Ye Ohh", "M. Oliver", "Geoffrey R. Spedding"],
+    "year": 2023,
+    "venue": "APS Division of Fluid Dynamics Meeting (DFD23)",
+    "location": "Washington, DC",
+    "format": "Oral"
+  },
+  {
+    "type": "conference-presentation",
+    "title": "Asymmetric stratified wakes",
+    "authors": ["Chan-Ye Ohh", "M. Oliver", "Geoffrey R. Spedding"],
+    "year": 2022,
+    "venue": "APS Division of Fluid Dynamics Meeting (DFD22)",
+    "location": "Indianapolis, IN",
+    "format": "Oral"
+  },
+  {
+    "type": "conference-presentation",
+    "title": "Regime classification for stratified wakes from planar velocity field snapshots using convolutional neural networks",
+    "authors": ["Vamsi Krishna Chinta", "M. Jones", "M. Yee", "P. Loekman", "Chan-Ye Ohh", "Geoffrey R. Spedding", "Mitul Luhar"],
+    "year": 2021,
+    "venue": "APS Division of Fluid Dynamics Meeting (DFD21)",
+    "location": "Phoenix, AZ",
+    "format": "Poster",
+    "notes": ["Poster Award (Second Place)"]
+  },
+  {
+    "type": "conference-presentation",
+    "title": "Wake identification of stratified flows using Dynamic Mode Decomposition",
+    "authors": ["Chan-Ye Ohh", "Geoffrey R. Spedding"],
+    "year": 2019,
+    "venue": "APS Division of Fluid Dynamics Meeting (DFD19)",
+    "location": "Seattle, WA",
+    "format": "Oral"
+  },
+  {
     "type": "conference-abstract",
     "title": "Leveraging fluid-structure interaction for passive control of flapping locomotion",
     "authors": [
@@ -72,6 +109,8 @@
     "venue": "APS Division of Fluid Dynamics Meeting (DFD16)",
     "url": "https://archive.aps.org/dfd/2016/h19/3/",
     "pdf": "pubs/Ohh_et_al_2016_APS_DFD_Abstract_001142.pdf",
+    "format": "Oral",
+    "location": "Portland, OR",
     "notes": [
       "Abstract submitted 29 Jul 2016 (per PDF)."
     ]

@@ -1,6 +1,11 @@
 ---
 import publications from '../data/publications.json';
 
+const journalPubs = publications.filter((p) => p.type === 'journal-article');
+const conferencePubs = publications.filter(
+  (p) => p.type === 'conference-presentation' || p.type === 'conference-abstract'
+);
+
 function formatAuthors(authors: string[]): string[] {
   return authors.map((a) => (a === 'Chan-Ye Ohh' ? `<strong>${a}</strong>` : a));
 }
@@ -10,6 +15,7 @@ function getBadges(pub: any): { label: string; cssClass: string }[] {
   for (const note of pub.notes || []) {
     if (note.toLowerCase().includes('editor')) badges.push({ label: "Editor's Suggestion", cssClass: 'badge--accent' });
     if (note.toLowerCase().includes('open access')) badges.push({ label: 'Open Access', cssClass: 'badge--primary' });
+    if (note.toLowerCase().includes('poster award')) badges.push({ label: 'Poster Award (2nd Place)', cssClass: 'badge--accent' });
   }
   return badges;
 }
@@ -20,7 +26,7 @@ function getBadges(pub: any): { label: string; cssClass: string }[] {
     <h2>Publications</h2>
 
     <ol class="pub-list">
-      {publications.map((pub) => (
+      {journalPubs.map((pub) => (
         <li class="pub-item">
           <p class="pub-item__authors" set:html={formatAuthors(pub.authors).join(', ')} />
           <p class="pub-item__title">
@@ -55,12 +61,47 @@ function getBadges(pub: any): { label: string; cssClass: string }[] {
         </li>
       ))}
     </ol>
+
+    <h3 class="subsection-heading">Presentations</h3>
+
+    <ol class="pub-list">
+      {conferencePubs.map((pub) => (
+        <li class="pub-item">
+          <p class="pub-item__authors" set:html={formatAuthors(pub.authors).join(', ')} />
+          <p class="pub-item__title">{pub.title}</p>
+          <p class="pub-item__venue">
+            <em>{pub.venue}</em>
+            {pub.location && `, ${pub.location}`}
+            {` (${pub.year})`}
+            {pub.format && ` — ${pub.format}`}
+          </p>
+          <div class="pub-item__meta">
+            {getBadges(pub).map((b) => (
+              <span class={`badge ${b.cssClass}`}>{b.label}</span>
+            ))}
+            {pub.url && (
+              <a href={pub.url} target="_blank" rel="noopener" class="pub-item__link">
+                Abstract
+              </a>
+            )}
+            {pub.pdf && (
+              <a href={`${import.meta.env.BASE_URL}${pub.pdf}`} class="pub-item__link">PDF</a>
+            )}
+          </div>
+        </li>
+      ))}
+    </ol>
   </div>
 </section>
 
 <style>
   .publications {
     background: var(--color-section-alt);
+  }
+
+  .subsection-heading {
+    margin-top: 2.5rem;
+    margin-bottom: 0.5rem;
   }
 
   .pub-list {
