@@ -1,6 +1,6 @@
 # Chan-Ye (Chris) Ohh — Personal Website
 
-Academic website built with [Astro](https://astro.build/), deployed to GitHub Pages at [chrisohh.github.io/cysite](https://chrisohh.github.io/cysite/).
+Academic website built with [Astro](https://astro.build/), deployed to GitHub Pages at [chrisohh.github.io](https://chrisohh.github.io/).
 
 ## Quick Start
 
