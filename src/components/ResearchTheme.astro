@@ -3,9 +3,10 @@ interface Props {
   title: string;
   figures: { src: string; alt: string }[];
   reverse?: boolean;
+  video?: { src: string; caption?: string };
 }
 
-const { title, figures, reverse = false } = Astro.props;
+const { title, figures, reverse = false, video } = Astro.props;
 ---
 
 <div class:list={['theme', { 'theme--reverse': reverse }]}>
@@ -21,13 +22,21 @@ const { title, figures, reverse = false } = Astro.props;
     </div>
   )}
 </div>
+{video && (
+  <div class="theme__video-wrap">
+    <video controls preload="none" class="theme__video">
+      <source src={video.src} type="video/mp4" />
+    </video>
+    {video.caption && <p class="theme__video-caption">{video.caption}</p>}
+  </div>
+)}
 
 <style>
   .theme {
     display: flex;
     gap: 2rem;
     align-items: flex-start;
-    margin-bottom: 3rem;
+    margin-bottom: 1.5rem;
   }
 
   .theme--reverse {
@@ -52,6 +61,23 @@ const { title, figures, reverse = false } = Astro.props;
   .theme__figures img {
     border-radius: var(--radius);
     border: 1px solid #e0e0e0;
+  }
+
+  .theme__video-wrap {
+    margin-bottom: 3rem;
+  }
+
+  .theme__video {
+    width: 100%;
+    border-radius: var(--radius);
+    border: 1px solid #e0e0e0;
+    background: #000;
+  }
+
+  .theme__video-caption {
+    font-size: 0.85rem;
+    color: var(--color-subtle);
+    margin-top: 0.4rem;
   }
 
   @media (max-width: 768px) {

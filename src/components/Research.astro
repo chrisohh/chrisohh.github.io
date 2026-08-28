@@ -8,6 +8,7 @@ import ResearchTheme from './ResearchTheme.astro';
 
     <ResearchTheme
       title="Stratified Ocean Wakes"
+      video={{ src: `${import.meta.env.BASE_URL}videos/stratified-wakes.mp4`, caption: 'Tow-tank experiment: wake of a 6:1 prolate spheroid in stratified fluid.' }}
       figures={[
         {
           src: `${import.meta.env.BASE_URL}images/figures/JFM_2024_997_A43_Fig2_experimental_setup.png`,
@@ -43,6 +44,7 @@ import ResearchTheme from './ResearchTheme.astro';
     <ResearchTheme
       title="Data-Driven Flow Identification"
       reverse
+      video={{ src: `${import.meta.env.BASE_URL}videos/dmd-flow.mp4`, caption: 'Dynamic mode decomposition applied to stratified wake measurements.' }}
       figures={[
         {
           src: `${import.meta.env.BASE_URL}images/figures/PRF_2022_024801_Fig6_snapshots_DMD_modes.png`,
@@ -80,6 +82,7 @@ import ResearchTheme from './ResearchTheme.astro';
 
     <ResearchTheme
       title="Air-Sea Interaction"
+      video={{ src: `${import.meta.env.BASE_URL}videos/air-sea.mp4`, caption: 'Air-sea interaction research at Scripps Institution of Oceanography.' }}
       figures={[]}
     >
       <div class="todo">
